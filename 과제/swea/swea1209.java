@@ -35,12 +35,9 @@ public class swea1209 {
             }
             colMax = Math.max(col,colMax);
         }
-
-
-        // 오른쪽 대각선 
-        // 왼쪽 대각선
-        int rightDiagonal = 0; 
-        int leftDiagonal = 0;  
+   
+        int rightDiagonal = 0;      // 오른쪽 대각선 
+        int leftDiagonal = 0;       // 왼쪽 대각선
         for(int i=0;i<N;i++){
             rightDiagonal += arr[i][i];
             leftDiagonal += arr[i][N-i-1];
@@ -50,8 +47,15 @@ public class swea1209 {
         System.out.println(colMax);
         System.out.println(rightDiagonal);
         System.out.println(leftDiagonal);
-        int ans = Math.max(Math.max(rowMax, colMax), Math.max(rightDiagonal, leftDiagonal));
-        //System.out.println("#" + test_case+ " " + ans);
+
+        int ans = 0;
+        if(rowMax >= colMax && rowMax >= rightDiagonal && rowMax >= leftDiagonal) ans = rowMax;
+        if(colMax >=rowMax && colMax >= rightDiagonal && colMax>=leftDiagonal) ans = colMax;
+        if(rightDiagonal>=rowMax && rightDiagonal >= colMax && rightDiagonal>=leftDiagonal) ans = rightDiagonal;
+        if(leftDiagonal>=rowMax && leftDiagonal >= colMax && rightDiagonal<=leftDiagonal) ans = leftDiagonal;
+        
+
+        System.out.println("#" +  " " + ans);
 
 
     }
