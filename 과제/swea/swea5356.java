@@ -23,15 +23,14 @@ public class swea5356 {
                 maxLen = Math.max(maxLen, len);
             }
             int size = arr.length;
-
-            char arr2 =' '; 
+            StringBuilder sb = new StringBuilder(); 
             for(int i=0; i<maxLen; i++){
                 for(int j=0; j<size; j++){
-                    System.out.print(arr[j].charAt(i));
-                    arr2 = arr[j].charAt(i);
+                    sb.append(arr[j].charAt(i));
+                    //System.out.print(arr[j].charAt(i));
                 }
             }
-            System.out.println("#" + t + " " + arr2);
+            System.out.println("#" + t + " " + sb);
          }
     }
 }
