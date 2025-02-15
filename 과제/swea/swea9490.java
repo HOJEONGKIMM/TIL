@@ -19,8 +19,7 @@ public class swea9490 {
 
 		for(int i=0;i<N;i++) {
 			for(int j=0;j<M;j++) {
-				arr[i][j] = sc.nextInt();// 숫자 받기
-				
+				arr[i][j] = sc.nextInt();// 숫자
 			}
 			
 		}
@@ -35,10 +34,10 @@ public class swea9490 {
 					for(int a=0;a<4;a++) {
 						// 반복문 한 번 더 돌려야 되는 것 같음........ 
 						// 근데 조건 어케 써야될지 모르겠음
-						
+
 						int nx = i + round * dx[a];
 						int ny = j + round * dy[a];
-						
+
 						if(nx>=0 & nx<=N && ny>=0 && ny<=M) {
 							sum += nx + ny;
 							
