@@ -22,6 +22,9 @@ public class swea2805_농작물수확하기 {
             }
         }
 
+        System.out.println(sum);
+
+        
         // 왼쪽위
         int leftUp = 0;
         for(int i=0; i<N/2; i++){
@@ -42,11 +45,25 @@ public class swea2805_농작물수확하기 {
         int leftDown = 0;
         for(int i=0; i<N/2; i++){
             for(int j=(N/2)+1; j<N; j++){
-                leftDown = arr[j][i];
+                leftDown += arr[j][i];
             }
         }
 
         // 오른쪽아래
+        int rightDown = 0;
+        for(int i=N-1; i>N/2; i--){
+            for(int j=(N/2)+1; j<N; j++){
+                rightDown += arr[j][i];
+            }
+        }
+
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+                System.out.println(arr[i][j] + " ");
+            }
+        }
+
+        System.out.println(sum);
 
     }
 }
