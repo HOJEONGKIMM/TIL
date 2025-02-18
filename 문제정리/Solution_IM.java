@@ -45,6 +45,7 @@ public class Solution_IM {
 							
 						}
 						
+                        // 최소값의 배열로 이동해야 됨
 						
 						longest = Math.max(cnt, longest);
 					}

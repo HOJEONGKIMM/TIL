@@ -27,11 +27,16 @@ public class swea1210 {
             }
         }
 
-        for(int i=arr.length;i>0;i--){
-            for(int j=arr.length;j>0;j--){
+        int cnt = 0;                                    // 몇 번 위로 올라갔는지 count
+        
+        for(int i=arr.length-1;i>=0;i--){               // arr.length로 시작하면 인덱스 범위 초과
+            for(int j=arr.length-1;j>=0;j--){
                 if(arr[i][j-1]==1){
-                    
-                } 
+                  continue;  
+                }else{ // 0인 경우
+                    if(i>0) i--;
+                    cnt++;
+                }
             }
         }
 
