@@ -36,7 +36,7 @@ public class swea2805_농작물 {
         
         for(int i=0; i<N; i+=2){
             for(int j=0; j<(N-i)/2; j++){
-                numbers[i][j] = 0;
+                continue;
             }
             for(int j=0; j<i; j++){
                 sum += numbers[i][j];
@@ -45,7 +45,7 @@ public class swea2805_농작물 {
         // 아래의 역삼각형
         for(int i=N-1; i>=0; i-=2){
             for(int j=0; j<(N-i)/2; j++){
-                numbers[i][j] = 0;
+                continue;
             }
             for(int j=0; j<i; j++){
                 sum += numbers[i][j];
