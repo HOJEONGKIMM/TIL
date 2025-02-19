@@ -31,24 +31,28 @@ public class Solution_IM {
 					int cnt = 0;
 					int nextValue = 500;
 					
+					int x = i;
+					int y = j;
 					
 					for(int dir=0; dir<4; dir++) {
 						
 						int nx = i + dx[dir];
 						int ny = j + dy[dir];
 						
-						if(nx >= 0 && nx<N && ny>=0 && ny < N) {
-							if(nextValue > arr[nx][ny]) {
-								nextValue = arr[nx][ny];
-								cnt ++;
+						while(true){
+							if(nx >= 0 && nx<N && ny>=0 && ny < N) {
+								if(nextValue > arr[nx][ny]) {
+									nextValue = arr[nx][ny];
+									x = nx;
+									y = ny;
+									cnt ++;
+								}
 							}
-							
 						}
-						
                         // 최소값의 배열로 이동해야 됨
 						
-						longest = Math.max(cnt, longest);
 					}
+					longest = Math.max(cnt, longest);
 					
 				}
 			}
