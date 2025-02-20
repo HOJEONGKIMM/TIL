@@ -76,9 +76,12 @@ public class swea1248 {
 
             while(!stack.isEmpty()){
                 int node = stack.pop();
-                count ++ ;
+                count ++ ;          // 자기 자신도 서브 트리 개수에 포함함
 
+                // 왼쪽 자식 추가
                 if(tree[node][0] !=0) stack.push(tree[node][0]);
+
+                // 오른쪽 자식 추가
                 if(tree[node][1] !=0) stack.push(tree[node][1]);
             }
 
