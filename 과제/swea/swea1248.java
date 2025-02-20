@@ -3,6 +3,7 @@ package 과제.swea;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class swea1248 {
     public static void main(String[] args) {
@@ -68,13 +69,21 @@ public class swea1248 {
                 ans = Math.max(common.get(i), ans);
             }
 
+            Stack<Integer> stack = new Stack<>();
 
-            int[] subTree = new int[V + 1];
-            
+            stack.push(ans);
+            int count = 0;
+
+            while(!stack.isEmpty()){
+                int node = stack.pop();
+                count ++ ;
+
+                if(tree[node][0] !=0) stack.push(tree[node][0]);
+                if(tree[node][1] !=0) stack.push(tree[node][1]);
+            }
 
 
-
-            System.out.println("#" + t + " " +ans + " " + subTree);
+            System.out.println("#" + t + " " + ans + " " + count);
         }
     }
 }
