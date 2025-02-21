@@ -1,6 +1,9 @@
 package 백준.구현;
 
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class b1316 {
     public static void main(String[] args) {
@@ -8,28 +11,28 @@ public class b1316 {
 
         int N = sc.nextInt();
 
+        
         int cnt = 0;
         for(int i=0; i < N; i++){
             String word = sc.nextLine();
             int len = word.length();
 
-            if(len == 1) {
-                cnt = 1;
-                break;
-            }
+            Set<Character> set = new HashSet<>();
+            Character prev = '';
+
             for(int a = 0; a<len; a++){
-                // 전체 단어 하나하나 확인하기
-                for(int b = 1; b<len; b++){
-                    if(word.charAt(a) != word.charAt(b)) continue;
-                    else {
-                        if(word.charAt(b) == word.charAt(b-1)) break;
-                    }
+                // 이전 문자랑 다르면 
 
-                }
+                // 근데 set에 있어서 이미 나온 문자면 cnt ++;
 
+                // or 새롭게 등장한 문자 추가
+
+                // prev 갱신
             }
 
         }
+
+        System.out.println(cnt);
         
     }
 }
