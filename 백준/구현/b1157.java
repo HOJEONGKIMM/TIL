@@ -9,6 +9,8 @@ public class b1157 {
         String word = sc.nextLine();
         word.toLowerCase();
 
+        int[] arr = new int[26];
+        
         Map<Character, Integer> map = new HashMap();
         for(int i=0; i < word.length(); i++){
             map.put(word.charAt(i), 1);
