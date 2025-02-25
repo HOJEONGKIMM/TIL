@@ -20,9 +20,14 @@ public class b1874 {
         }
 
         StringBuilder sb = new StringBuilder();
-        
+
         for(int i=0; i<arr.length; i++){
-           
+           stack.push(num++);
+           sb.append("+\n");
+
+           while (true) { 
+               
+           }
             
         }
 
