@@ -9,20 +9,25 @@ public class b1874 {
 
         int N = sc.nextInt();
 
+        int[] arr = new int[N];
+
+        int num = 1; 
+
         Stack<Integer> stack = new Stack<>();
 
         for(int i=0; i<N; i++){ 
-            stack.add(sc.nextInt());
+            arr[i] = sc.nextInt();
         }
 
-        while(!stack.isEmpty()){
-            while(stack.pop() < stack.peek()){
-                System.out.println("-");
-            }
-            if(stack.pop() > stack.peek()){
-                
-            }
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i=0; i<arr.length; i++){
+           
+            
         }
+
+
+        
 
     }
 }
