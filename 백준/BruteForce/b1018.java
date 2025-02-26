@@ -13,6 +13,7 @@ public class b1018 {
         int M = sc.nextInt();
 
         String[][] board = new String[N][M];
+        boolean[][] visited = new boolean[N][M];
 
         for(int i=0; i<N; i++){
             for(int j=0; j<M; j++){
@@ -20,7 +21,35 @@ public class b1018 {
             }
         }
 
-        
+        int cnt = 0;
+        for(int i=0; i<N; i++){
+            for(int j=0; j<M; j++){
+
+                for(int dir = 0; dir < 4; dir++){
+                    int nx = i + dx[dir];
+                    int ny = j + dy[dir];
+
+
+                    if(board[i][j].equals("B")){
+                        if(nx>=0 && nx< N && !board[nx][ny].equals("W") && !visited[nx][ny]) {
+                            board[nx][ny] = "W";
+                            cnt++;
+                            visited[nx][ny] = true;
+                        }
+                    }else{
+                        if(nx>=0 && nx< N && !board[nx][ny].equals("B") && !visited[nx][ny]) {
+                            board[nx][ny] = "B";
+                            cnt++;
+                            visited[nx][ny] = true;
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+        System.out.println(cnt);
 
 
     }
