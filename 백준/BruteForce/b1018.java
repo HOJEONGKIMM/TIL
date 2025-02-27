@@ -11,6 +11,7 @@ public class b1018 {
 
         int N = sc.nextInt();
         int M = sc.nextInt();
+        sc.nextLine();
 
         char[][] board = new char[N][M];
         boolean[][] visited = new boolean[N][M];
@@ -31,6 +32,8 @@ public class b1018 {
         int cnt = 0;
         for(int i=0; i<N; i++){
             for(int j=0; j<M; j++){
+                // 이미 방문한 곳은 skip
+                if(visited[i][j]==true) continue;
 
                 int x = i;
                 int y = j;                
@@ -52,16 +55,16 @@ public class b1018 {
                                     visited[nx][ny] = true;
                                     nextX = nx; nextY = ny;
                             }
-                        }else{
-                            if(board[x][y]=='W' && board[nx][ny]!='B') {
-                                board[nx][ny] = 'B';
-                                cnt++;
-                                visited[nx][ny] = true;
-                                nextX = nx; nextY = ny;
-                            }
+                            else{
+                                if(board[x][y]=='W' && board[nx][ny]!='B') {
+                                    board[nx][ny] = 'B';
+                                    cnt++;
+                                    visited[nx][ny] = true;
+                                    nextX = nx; nextY = ny;
+                                }
 
+                            }
                         }
-                        
 
                     }
                     if(nextX==-1) break;
