@@ -45,15 +45,15 @@ public class b1018 {
                         int ny = y + dy[dir];
 
 
-                        if(board[x][y]=='B'){
-                            if(nx>=0 && nx< N && board[nx][ny]!='W' && !visited[nx][ny]) {
-                                board[nx][ny] = 'W';
-                                cnt++;
-                                visited[nx][ny] = true;
-                                nextX = nx; nextY = ny;
+                        if(nx>=0 && nx< N && ny>=0 && ny<M && !visited[nx][ny]) {
+                            if(board[x][y]=='B' && board[nx][ny]!='W'){
+                                    board[nx][ny] = 'W';
+                                    cnt++;
+                                    visited[nx][ny] = true;
+                                    nextX = nx; nextY = ny;
                             }
                         }else{
-                            if(nx>=0 && nx< N && board[nx][ny]!='B' && !visited[nx][ny]) {
+                            if(board[x][y]=='W' && board[nx][ny]!='B') {
                                 board[nx][ny] = 'B';
                                 cnt++;
                                 visited[nx][ny] = true;
@@ -61,13 +61,11 @@ public class b1018 {
                             }
 
                         }
-
-                        if(nextX==-1) {
-                            break;
-                        }
-                        x = nextX; y = nextY;
+                        
 
                     }
+                    if(nextX==-1) break;
+                    x = nextX; y = nextY;
                 }
 
             }
