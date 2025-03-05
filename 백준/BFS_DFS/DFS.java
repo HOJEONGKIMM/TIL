@@ -20,10 +20,12 @@ public class DFS {
     static boolean[] visited;
 
 
-    static void dfs(ArrayList<ArrayList<Integer>> adj){
+    static void dfs(ArrayList<ArrayList<Edge>> adj){
         Stack<Integer> stack = new Stack<>();
         for(int i=0; i<N-1; i++){
 
+
+            
         }
 
     }
