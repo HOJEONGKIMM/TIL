@@ -4,8 +4,6 @@ import java.util.*;
 
 public class DFS {
 
-    static int N;
-
     static ArrayList<Edge>[] adj;
     static boolean[] visited;
     static int[] distance;
@@ -14,9 +12,9 @@ public class DFS {
 
         Scanner sc = new Scanner(System.in);
 
-        N = sc.nextInt();
+        int N = sc.nextInt();
 
-        for (int i = 0; i < N - 1; i++) {
+        for (int i = 0; i <= N; i++) {
             adj.add(new ArrayList<>());
         }
 
