@@ -345,3 +345,7 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,venv,python,eclipse,visualstudiocode,jupyternotebooks
 *.iml
 *.iml/
+
+*.classpath
+*.project
+
